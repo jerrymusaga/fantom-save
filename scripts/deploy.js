@@ -2,7 +2,7 @@
 // yours, or create new ones.
 
 const { ethers } = require("hardhat");
-// const path = require("path");
+const path = require("path");
 
 async function main() {
   // This is just a convenience check
@@ -27,9 +27,39 @@ async function main() {
   const save = await FantomSave.deploy();
   await save.deployed();
 
-  console.log("Token address:", save.address);
+  console.log("FantomSave address:", save.address);
+
+  saveFrontendFiles(save);
 
 }
+
+function saveFrontendFiles(token) {
+  const fs = require("fs");
+  const contractsDir = path.join(__dirname, "..", "frontend", "src", "contracts");
+
+  if (!fs.existsSync(contractsDir)) {
+    fs.mkdirSync(contractsDir);
+  }
+
+  fs.writeFileSync(
+    path.join(contractsDir, "contract-address.json"),
+    JSON.stringify({ Token: token.address }, undefined, 2)
+  );
+
+  const FantomSaveArtifact = artifacts.readArtifactSync("FantomSave");
+
+  fs.writeFileSync(
+    path.join(contractsDir, "FantomSave.json"),
+    JSON.stringify(FantomSaveArtifact, null, 2)
+  );
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 
 
 main()

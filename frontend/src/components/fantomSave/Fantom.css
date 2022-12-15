@@ -1,0 +1,232 @@
+.App {
+    text-align: center;
+  }
+  
+  body {
+    background-color: rgb(219, 219, 219);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  /* Styling of the app */
+  
+  .main__header {
+    /* background-image: url("./water.jpg"); */
+    margin-top: 0px;
+    height: 360px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 5px 21px 6px rgb(0, 183, 255);
+    margin-bottom: 12px;
+    padding-top: 84px;
+    color: white;
+  }
+  
+  .header__container {
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 50%;
+    margin-left: 12%;
+    padding: 12px 9px;
+    border-radius: 12px;
+  }
+  
+  .header__container h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .header__container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    margin-left: 16px;
+  }
+  
+  .current__bal {
+    margin-left: 112px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+  }
+  
+  .current__bal span {
+    color: rgb(1, 255, 1);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .transaction__details h5 {
+    margin-top: 12px;
+    cursor: pointer;
+    color: rgb(255, 17, 0);
+  }
+  
+  .transaction__details h5:hover {
+    color: rgb(212, 212, 212);
+  }
+  
+  .body__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .body__container div {
+    margin-top: 24px;
+  }
+  
+  .body__navigation ul {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 300;
+    color: rgb(0, 140, 255);
+  }
+  
+  .body__navigation ul li {
+    margin: 4px 18px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .navigate {
+    color: blue;
+  }
+  
+  .navigate:hover {
+    color: rgb(0, 140, 255);
+  }
+  
+  .body__navigation ul li:hover {
+    color: blue;
+  }
+  
+  .detailed__screen
+  {
+    background-color: rgba(0, 0, 0, 0.788);
+    margin: 12px 12%;
+    color: white;
+    padding: 12px 24px;
+    width: 44%;
+    border-radius: 12px;
+  }
+  
+  .detailed__screen h3
+  {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 140, 255);
+    font-weight: 900;
+  }
+  
+  .detailed__screen input
+  {
+    outline: none;
+    border: none;
+    margin: 4px;
+    border-radius: 7px;
+    padding: 4px 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(88, 88, 88);
+  }
+  
+  .detailed__screen span, .des__label
+  {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  
+  .descrip
+  {
+    width: 60%;
+  }
+  
+  .money__des
+  {
+    width: 54%;
+  }
+  
+  .money__per
+  {
+    width: 20%;
+  }
+  
+  button
+  {
+    outline: none;
+    border: none;
+    margin: 6px 4px;
+    padding: 4px 7px;
+    border-radius: 6px;
+    transition: .4s;
+  }
+  
+  .enter__btn
+  {
+    background-color: rgb(5, 216, 5);
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 4px 21px;
+    margin-top: 16px;
+  }
+  
+  .adder
+  {
+    width: 80%;
+    background-color: rgb(0, 119, 255);
+    color: white;
+  }
+  
+  .enter__btn:hover
+  {
+    background-color: rgb(13, 255, 13);
+    color: red;
+  }
+  
+  /* End of table styling */
+  
+  /* End of styling of the app */
+  
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
